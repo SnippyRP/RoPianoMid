@@ -23,7 +23,6 @@ local c3White = Color3.new(1, 1, 1)
 
 local preview, notes, noteTemplate
 
-ie = 0
 function Preview:Draw(song)
     notes:ClearAllChildren()
 
@@ -44,7 +43,6 @@ function Preview:Draw(song)
                 note.Position = UDim2.new((pitch - 36) / 61, 0, 0, -event[2] / 2)
                 note.Size = UDim2.new(0.016, 0, 0, math.max(event[3] / 2, 1))
                 note.Parent = notes
-                ie += 1
             end
         end
     end
